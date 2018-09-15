@@ -36,19 +36,21 @@ public class GameManager : MonoBehaviour {
 	3 is "Go!" state
 	*/
 
-	void Awake(){
-		textController = textPrompt.GetComponent<TextController>();
-		if (textController == null)
-			Debug.Log("Could not find textController");
-	}
-	// Use this for initialization
-	void Start () {
+	void Awake(){		
 		
 		gameState = 1;
 		player1Hit = false;
 		player2Hit = false;
 		//bool gameOver = false;
-		textController.updateText(gameState);
+	}
+	// Use this for initialization
+	void Start () {
+
+
+		textController = textPrompt.GetComponent<TextController>();
+		if (textController == null)
+			Debug.Log("Could not find textController");
+
 		StartCoroutine("setGameState");
 	}
 	

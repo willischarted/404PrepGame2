@@ -19,6 +19,10 @@ public class BulletController : MonoBehaviour {
 
 
 	void Awake() {
+	
+	}
+	// Use this for initialization
+	void Start () {
 		rigidBody = GetComponent<Rigidbody>();
 		if (rigidBody == null){
 			Debug.Log("Could not find rigidbody");
@@ -28,10 +32,6 @@ public class BulletController : MonoBehaviour {
 		if (gameManagerScript == null) {
 			Debug.Log("Could not find gameManagerScript");
 		}
-	}
-	// Use this for initialization
-	void Start () {
-
 		
 		isFire = false;
 
