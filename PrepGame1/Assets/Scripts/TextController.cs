@@ -16,14 +16,23 @@ public class TextController : MonoBehaviour {
 
 
 	void Awake(){
-		gameText = GetComponent<Text>();
-		if (gameText == null)
-			Debug.Log("Could not find gameText!");
-		//Debug.Log("done textcontroller");
+		
 	}
 
 	// Use this for initialization
 	void Start () { 
+
+		gameText = GetComponent<Text>();
+		if (gameText == null)
+			Debug.Log("Could not find gameText!");
+		//Debug.Log("done textcontroller");
+		
+		gameText = GetComponent<Text>();
+		if (gameText == null)
+			Debug.Log("Could not find gameText!");
+		//Debug.Log("done textcontroller");
+
+		updateText(1);
 		
 	}
 	
